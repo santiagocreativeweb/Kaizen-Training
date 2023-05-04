@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../img/logo2.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- LINKS FONTS & ICONS & ANIMATIONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- KEYWORDS -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- TITULO -->
+    <title>Kaizen Training</title>
+</head>
+<body>
+     <!-- NAVBAR -->
+     <header>
+      <a href="#" class="logo">Kaizen Training</a>
+      <nav class="navbar">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="../index.html" class="active">Inicio</a>
+        <a href="servicios&historia.html">Metodo Kaizen</a>
+        <a href="servicios&historia.html">Historia</a>
+        <a href="servicios&historia.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    
+    <div class="container-form">
+        <div class="info-form">
+            <h2>Contáctanos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eligendi est voluptates quae ipsam eius, in quasi odio porro aut vel beatae aperiam.</p>
+            <a><i class="fa fa-phone"></i> +54 9 2234 24-5316</a>
+            <a><i class="fa fa-envelope"></i> kaizentng.contact@gmail.com</a>
+            <a><i class="fa fa-map-marked"></i> Buenos Aires, Argentina</a>
+        </div>
+        <form action="https://script.google.com/macros/s/AKfycby5Gd5EZ9a8L5ATQp3Ck_cfnDmAO9x4AbY2LcsOZhhUHWwNcttBtFPazi52OUOGt-9B/exec" method="post">
+          <label for="name">Nombre:</label>
+          <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" class="campo" required><br>
+      
+          <label for="edad">Edad:</label>
+          <input type="text" name="edad" id="edad" placeholder="Ingresa tu edad (Solo numero)" class="campo" required><br>
+      
+          <label for="altura">Altura (cm):</label>
+          <input type="text" name="altura" id="altura" placeholder="Ingresa tu Altura (cm)" class="campo" required><br>
+      
+          <label for="peso">Peso (kg):</label>
+          <input type="text" name="peso" id="peso" placeholder="Ingresa tu peso (kg)" class="campo" required><br>
+      
+          <label for="objetivo">Cual es tu objetivo?</label><br>
+          <input type="text" name="objetivo" id="objetivo" placeholder="Describe tu objetivo.." class="campo" required><br>
+      
+          <label for="lesion">Tenes o tuviste alguna lesion que te siga molestando?</label><br>
+          <input type="text" name="lesion" id="lesion" placeholder="Escriba su respuesta" class="campo" required><br>
+      
+          <label for="tiempo">Cuantos dias a la semana tenes disponibles para entrenar?</label><br>
+          <input type="text" name="tiempo" id="tiempo" placeholder="Escriba su respuesta" class="campo" required><br>
+      
+          <label for="experiencia">Tenes experiencia previa entrenando? Si es asi, cuanto tiempo llevas?</label><br>
+          <input type="text" name="experiencia" id="experiencia" placeholder="Escriba su respuesta" class="campo" required><br>
+      
+          <label for="intolerante">Sos intolerante a algun tipo de alimento?</label><br>
+          <input type="text" name="intolerante" id="intolerante" placeholder="Escriba su respuesta" class="campo" required><br>
+      
+          <button type="submit" class="btn-enviar" id="enviarForm">Enviar Mensaje</button>
+      </form>      
+    </div>
+    
+
+    <script>
+      function onSubmit() {
+        console.log(e.parameter)
+        let form = document.forms[0]
+        google.script.run.submitForm(form)
+        form.reset()
+        form.submit()
+}
+        function formSubmit() {
+          Swal.fire({
+          icon: 'success',
+          title: 'Formulario enviado con Exito',
+          text: 'Muchas gracias por enviar el formulario',
+          timer: 2500,
+        })
+      }
+    </script>
+    
+    </script>
+    <!-- FOOTER -->
+    <footer class="footer"> 
+      <div class="grupo-1">
+          <div class="box">
+          <figure>
+              <a href="#">
+                <img src="../img/logo2.png" alt="Kaizen, training" class="logofooter">
+              </a>
+          </figure>
+        </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+          <p>Somos una comunidad, nuestro objetivo es hacer que nuestros miembros logren una mejora constante con el pasar del tiempo y lleguen a esa version que tanto buscan!</p>
+          <p>Lo hacemos mediante un metodo ideado por nosotros mismos que busca la clarificacion de objetivos y la mejora de habitos para lograr tu mejor version!</p> 
+      </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="redsocial">
+          <a href="https://twitter.com/juampisrz" target="_blank"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+             <a href="https://youtube.com/@juampisrz" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+             <a href="https://instagram.com/juampisrz?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"  style="color: #ffffff;"></i></a>
+      </div>
+        </div>
+      </div>
+      <div class="grupo-2"> 
+          <small>&copy;2023 <b>KAIZEN TRAINING</b> - TODOS LOS DERECHOS RESERVADOS.</small>
+      </div>
+
+      <script src="../js/app.js"></script>
+  </footer>
+</body>
+</html>
